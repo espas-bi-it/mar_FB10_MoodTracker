@@ -1,0 +1,154 @@
+{
+  "courses": [
+    {
+      "name": "Malworkshop",
+      "description": "Lass deiner Kreativität freien Lauf und lerne die Grundlagen des Malens.",
+      "location": "Zürich",
+      "date": "2025-07-01",
+      "time": "10:00 - 12:00",
+      "feedback": {
+        "enabled": true,
+        "type": "rating",
+        "hint": "Rate the course from 1 to 5 stars."
+      },
+      "rating": null,
+      "rating_timestamp": null,
+      "comment": null
+    },
+    {
+      "name": "Abenteuerwanderung",
+      "description": "Erkunde die Natur und lerne auf einer spannenden Wanderung mehr über Flora und Fauna.",
+      "location": "Zermatt",
+      "date": "2025-07-02",
+      "time": "09:00 - 12:00",
+      "feedback": {
+        "enabled": true,
+        "type": "rating",
+        "hint": "Rate the hike from 1 to 5 stars."
+      },
+      "rating": null,
+      "rating_timestamp": null,
+      "comment": null
+    },
+    {
+      "name": "Schwimmkurs",
+      "description": "Lerne schwimmen oder verbessere deine Schwimmtechniken.",
+      "location": "Küsnacht ZH",
+      "date": "2025-07-03",
+      "time": "14:00 - 16:00",
+      "feedback": {
+        "enabled": true,
+        "type": "rating",
+        "hint": "Rate the swimming course from 1 to 5 stars."
+      },
+      "rating": null,
+      "rating_timestamp": null,
+      "comment": null
+    },
+    {
+      "name": "Töpferkurs",
+      "description": "Gestalte deine eigenen Töpferstücke aus Ton und entdecke die Welt der Keramik.",
+      "location": "Hinwil",
+      "date": "2025-07-04",
+      "time": "10:00 - 12:00",
+      "feedback": {
+        "enabled": true,
+        "type": "rating",
+        "hint": "Rate the pottery workshop from 1 to 5 stars."
+      },
+      "rating": null,
+      "rating_timestamp": null,
+      "comment": null
+    },
+    {
+      "name": "Science Experiments",
+      "description": "Explore exciting scientific experiments and discover the world of chemistry and physics.",
+      "location": "Learning Lab",
+      "date": "2025-07-05",
+      "time": "09:30 - 11:30",
+      "feedback": {
+        "enabled": true,
+        "type": "rating",
+        "hint": "Rate the science experiments from 1 to 5 stars."
+      },
+      "rating": null,
+      "rating_timestamp": null,
+      "comment": null
+    },
+    {
+      "name": "Kids Cooking Class",
+      "description": "Learn how to cook simple and delicious dishes and understand important ingredients in the kitchen.",
+      "location": "Kitchen",
+      "date": "2025-07-06",
+      "time": "13:00 - 15:00",
+      "feedback": {
+        "enabled": true,
+        "type": "rating",
+        "hint": "Rate the cooking class from 1 to 5 stars."
+      },
+      "rating": null,
+      "rating_timestamp": null,
+      "comment": null
+    },
+    {
+      "name": "Reading Club",
+      "description": "Read exciting stories together and learn how to choose good books.",
+      "location": "Library",
+      "date": "2025-07-07",
+      "time": "10:00 - 12:00",
+      "feedback": {
+        "enabled": true,
+        "type": "rating",
+        "hint": "Rate the reading club from 1 to 5 stars."
+      },
+      "rating": null,
+      "rating_timestamp": null,
+      "comment": null
+    },
+    {
+      "name": "Knight Games",
+      "description": "Dive into the world of knights and princesses and experience exciting adventures.",
+      "location": "Castle Garden",
+      "date": "2025-07-08",
+      "time": "11:00 - 13:00",
+      "feedback": {
+        "enabled": true,
+        "type": "rating",
+        "hint": "Rate the knight games from 1 to 5 stars."
+      },
+      "rating": null,
+      "rating_timestamp": null,
+      "comment": null
+    },
+    {
+      "name": "Music Class",
+      "description": "Learn an instrument or improve your musical knowledge in a group.",
+      "location": "Music Room",
+      "date": "2025-07-09",
+      "time": "15:00 - 17:00",
+      "feedback": {
+        "enabled": true,
+        "type": "rating",
+        "hint": "Rate the music class from 1 to 5 stars."
+      },
+      "rating": null,
+      "rating_timestamp": null,
+      "comment": null
+    },
+    {
+      "name": "Kids Yoga",
+      "description": "Learn yoga techniques for relaxation and improving posture.",
+      "location": "Yoga Studio",
+      "date": "2025-07-10",
+      "time": "08:30 - 10:00",
+      "feedback": {
+        "enabled": true,
+        "type": "rating",
+        "hint": "Rate the yoga class from 1 to 5 stars."
+      },
+      "rating": null,
+      "rating_timestamp": null,
+      "comment": null
+    }
+  ]
+}

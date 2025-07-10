@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             x:Class="mar_FB10_MoodTracker.MainPage"
+             BackgroundColor="#058F9E">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+
+            <!-- Bestehende Kursfelder: Name, Bild, Beschreibung -->
+            <CollectionView ItemsSource="{Binding Courses}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="25"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Padding="0" Stroke="Gray" Background="#F8F8F8" StrokeThickness="1" StrokeShape="RoundRectangle 12" WidthRequest="300" HeightRequest="500" HorizontalOptions="Center">
+                            <Border.Triggers>
+                                <DataTrigger TargetType="Border" Binding="{Binding Name}" Value="Malworkshop">
+                                    <Setter Property="Background" Value="#201965"/>
+                                </DataTrigger>
+                                <DataTrigger TargetType="Border" Binding="{Binding Name}" Value="Abenteuerwanderung">
+                                    <Setter Property="Background" Value="#D9D9D9"/>
+                                </DataTrigger>
+                                <DataTrigger TargetType="Border" Binding="{Binding Name}" Value="Schwimmkurs">
+                                    <Setter Property="Background" Value="#9F0078"/>
+                                </DataTrigger>
+                                <DataTrigger TargetType="Border" Binding="{Binding Name}" Value="Töpferkurs">
+                                    <Setter Property="Background" Value="#000000"/>
+                                </DataTrigger>
+                            </Border.Triggers>
+                            <VerticalStackLayout>
+                                <BoxView HeightRequest="40" Color="Transparent"/>
+                                <Border Background="#058F9E" StrokeThickness="0" Padding="10,8" WidthRequest="200" HorizontalOptions="Center" Margin="0,0,0,16">
+                                    <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="22" TextColor="White" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                                </Border>
+                                <!-- Bilder wie gehabt -->
+                                <Image Source="painting_workshop.jpg" HeightRequest="200" Margin="0,0,0,10" HorizontalOptions="Center" IsVisible="False">
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image" Binding="{Binding Name}" Value="Malworkshop">
+                                            <Setter Property="IsVisible" Value="True"/>
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                                <Image Source="adventure_hike.jpg" HeightRequest="200" Margin="0,0,0,10" HorizontalOptions="Center" IsVisible="False">
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image" Binding="{Binding Name}" Value="Abenteuerwanderung">
+                                            <Setter Property="IsVisible" Value="True"/>
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                                <Image Source="swimming_course.jpg" HeightRequest="200" Margin="0,0,0,10" HorizontalOptions="Center" IsVisible="False">
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image" Binding="{Binding Name}" Value="Schwimmkurs">
+                                            <Setter Property="IsVisible" Value="True"/>
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                                <Image Source="pottery_workshop.jpeg" HeightRequest="200" Margin="0,0,0,10" HorizontalOptions="Center" IsVisible="False">
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image" Binding="{Binding Name}" Value="Töpferkurs">
+                                            <Setter Property="IsVisible" Value="True"/>
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                                <!-- Beschreibung -->
+                                <Border Background="#E0F7FA" StrokeThickness="0" Padding="10,8" WidthRequest="240" HorizontalOptions="Center" Margin="0,0,0,16">
+                                    <Label Text="{Binding Description}" FontSize="14" TextColor="Black" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                                </Border>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Neue Kursfelder: Name, Bild, Location, Date, Time (ohne Beschreibung) -->
+            <CollectionView ItemsSource="{Binding CoursesWithDetails}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="25"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Padding="0" Stroke="Gray" Background="#F8F8F8" StrokeThickness="1" StrokeShape="RoundRectangle 12" WidthRequest="300" HeightRequest="500" HorizontalOptions="Center">
+                            <Border.Triggers>
+                                <DataTrigger TargetType="Border" Binding="{Binding Name}" Value="Malworkshop">
+                                    <Setter Property="Background" Value="#201965"/>
+                                </DataTrigger>
+                                <DataTrigger TargetType="Border" Binding="{Binding Name}" Value="Abenteuerwanderung">
+                                    <Setter Property="Background" Value="#D9D9D9"/>
+                                </DataTrigger>
+                                <DataTrigger TargetType="Border" Binding="{Binding Name}" Value="Schwimmkurs">
+                                    <Setter Property="Background" Value="#9F0078"/>
+                                </DataTrigger>
+                                <DataTrigger TargetType="Border" Binding="{Binding Name}" Value="Töpferkurs">
+                                    <Setter Property="Background" Value="#000000"/>
+                                </DataTrigger>
+                            </Border.Triggers>
+                            <VerticalStackLayout>
+                                <BoxView HeightRequest="40" Color="Transparent"/>
+                                <Border Background="#058F9E" StrokeThickness="0" Padding="10,8" WidthRequest="200" HorizontalOptions="Center" Margin="0,0,0,16">
+                                    <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="22" TextColor="White" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                                </Border>
+                                <!-- Bilder wie gehabt -->
+                                <Image Source="painting_workshop.jpg" HeightRequest="200" Margin="0,0,0,10" HorizontalOptions="Center" IsVisible="False">
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image" Binding="{Binding Name}" Value="Malworkshop">
+                                            <Setter Property="IsVisible" Value="True"/>
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                                <Image Source="adventure_hike.jpg" HeightRequest="200" Margin="0,0,0,10" HorizontalOptions="Center" IsVisible="False">
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image" Binding="{Binding Name}" Value="Abenteuerwanderung">
+                                            <Setter Property="IsVisible" Value="True"/>
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                                <Image Source="swimming_course.jpg" HeightRequest="200" Margin="0,0,0,10" HorizontalOptions="Center" IsVisible="False">
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image" Binding="{Binding Name}" Value="Schwimmkurs">
+                                            <Setter Property="IsVisible" Value="True"/>
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                                <Image Source="pottery_workshop.jpeg" HeightRequest="200" Margin="0,0,0,10" HorizontalOptions="Center" IsVisible="False">
+                                    <Image.Triggers>
+                                        <DataTrigger TargetType="Image" Binding="{Binding Name}" Value="Töpferkurs">
+                                            <Setter Property="IsVisible" Value="True"/>
+                                        </DataTrigger>
+                                    </Image.Triggers>
+                                </Image>
+                                <!-- Details -->
+                                <Label Text="{Binding Location}" FontSize="12"/>
+                                <Label Text="{Binding Date}" FontSize="12"/>
+                                <Label Text="{Binding Time}" FontSize="12"/>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
